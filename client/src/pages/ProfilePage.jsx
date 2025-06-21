@@ -46,10 +46,10 @@ const handleSubmit = async (e)=>{
             Upload profile image
           </label>
           <input onChange={(e)=>setName(e.target.value)} value={name}
-          type="text" required placeholder='Your Name' className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2
+          type="text" required placeholder='Your Name' className='p-2 border border-gray-500 rounded-md bg-gray-800 text-white placeholder-gray-400  focus:outline-none focus:ring-2
           focus:ring-violet-500' />
           <textarea onChange={(e)=>setBio(e.target.value)} value={bio}
-           placeholder='Write profile bio' required className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2
+           placeholder='Write profile bio' required className='p-2 border border-gray-500 rounded-md bg-gray-800 text-white placeholder-gray-400  focus:outline-none focus:ring-2
           focus:ring-violet-500' rows={4}></textarea>
           <button type='submit' className='bg-gradient-to-r from-purple-400
           to-violet-600 text-white p-2 rounded-full text-lg cursor-pointer'>
