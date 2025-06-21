@@ -31,7 +31,7 @@ const LoginPage = () => {
         <img src={assets.logo_big} alt=""  className='w-[min(30vw,250px)]'/>
 
         {/* right part */}
-       <form onSubmit={onSubmitHandler} className='border-2 bg-white/8 text-white border-gray-500 p-6 flex 
+       <form onSubmit={onSubmitHandler} className='border-2 bg-white bg-opacity-10  text-white border-gray-500 p-6 flex 
        flex-col gap-6 rounded-lg shadow-lg'>
           <h2 className='font-medium text-2xl flex justify-between items-center'>
             {currState}
@@ -41,17 +41,17 @@ const LoginPage = () => {
              
              {currState==="Sign up" && !isDataSubmitted && (
                   <input onChange={(e)=>setFullName(e.target.value)} value={fullName}
-                   type="text" className='p-2 border border-gray-500 rounded-md
+                   type="text" className='p-2 border border-gray-500 rounded-md bg-gray-800 text-white placeholder-gray-400
             focus:outline-none' placeholder='Full Name' required />
              )}
              {
                 !isDataSubmitted && (
                   <>
                   <input onChange={(e)=>setEmail(e.target.value)} value={email}
-                  type="email" placeholder='Email Address' required className='p-2 border border-gray-500 rounded-md
+                  type="email" placeholder='Email Address' required className='p-2 border border-gray-500 rounded-md bg-gray-800 text-white placeholder-gray-400
             focus:outline-none focus:ring-2 focus:ring-indigo-500' />
             <input onChange={(e)=>setPassword(e.target.value)} value={password}
-                  type="password" placeholder='Enter Password' required className='p-2 border border-gray-500 rounded-md
+                  type="password" placeholder='Enter Password' required className='p-2 border border-gray-500 rounded-md bg-gray-800 text-white placeholder-gray-400
             focus:outline-none focus:ring-2 focus:ring-indigo-500' />
                   </>
                 )}
@@ -59,7 +59,7 @@ const LoginPage = () => {
                 {
                     currState==="Sign up" && isDataSubmitted && (
                         <textarea onChange={(e)=>setBio(e.target.value)} value={bio}
-                         rows={4} className='p-2 border border-gray-500 rounded-md
+                         rows={4} className='p-2 border border-gray-500 rounded-md bg-gray-800 text-white placeholder-gray-400
             focus:outline-none focus:ring-2 focus:ring-indigo-500' placeholder='Provide a short bio....' required></textarea>
                     )
                 }
