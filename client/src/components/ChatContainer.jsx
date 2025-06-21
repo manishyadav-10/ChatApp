@@ -90,7 +90,7 @@ const ChatContainer = () => {
           <div className='flex-1 flex items-center bg-gray-800 rounded-full'>
             <input onChange={(e)=>setInput(e.target.value)} value={input}
             onKeyDown={(e)=>e.key==="Enter" ?  handleSendMessage(e) : null } type="text" placeholder='Send a message' className='flex-1 text-sm p-3 border-none rounded-lg
-            outline-none text-white placeholder-gray-400'/>
+            outline-none text-white placeholder-gray-400 bg-transparent'/>
             <input onChange={handleSendImage} type="file" id='image' accept='image/png, image/jpeg' hidden/>
             <label htmlFor="image">
                 <img src={assets.gallery_icon} alt="" className='w-5 mr-2 cursor-pointer'/>
